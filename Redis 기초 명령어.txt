@@ -1,0 +1,35 @@
+<서버 실행>
+
+C:/Users/kimsu/AppData/Local/Programs/Python/Python313/python.exe -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+
+<swagger 접속>
+
+http://localhost:8000/docs
+
+
+<Redis 기초 명령어>
+
+# Redis 시작
+wsl sudo service redis-server start
+
+# Redis 중지
+wsl sudo service redis-server stop
+
+# Redis 재시작
+wsl sudo service redis-server restart
+wsl redis-server --daemonize yes
+
+# Redis 상태 확인
+wsl sudo service redis-server status
+
+
+# Redis 연결 테스트
+wsl redis-cli ping
+
+# Redis CLI 접속
+wsl redis-cli
+
+# 특정 명령 실행
+wsl redis-cli SET mykey "Hello"
+wsl redis-cli GET mykey
